@@ -309,9 +309,8 @@ ii=confirm(input,"is it your name?"); */
 function fetchData() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            // resolve("Data received!"); 
-            reject("Error occurred!");
-        }, 2000);
+            resolve("Data received!");  // or reject("Error occurred!");
+        }, 3000);
     });
 }
 
@@ -319,6 +318,7 @@ async function handleData() {
     try {
         const data = await fetchData();
         console.log(data);
+        // document.getElementById("h1").innerHTML=data;
     } catch (error) {
         console.error("Error:", error);
     }
