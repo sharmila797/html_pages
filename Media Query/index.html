@@ -1,0 +1,189 @@
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        div{
+            background-color: yellow;
+            width: 500px;
+            height: 100px;
+        }
+      
+        @media screen and  ( min-width:600px){
+            div{
+                background-color: blue;
+            }
+        }
+        
+        @media screen and (max-width:600px){
+            div{
+                background-color: red;
+            }
+        }
+        @media screen and (min-width:900px) and (max-width:1200px) {
+            div{
+                background-color: black;
+            }
+            
+        }
+
+       
+        </style>
+
+
+
+        <div></div> 
+</body>
+</html> -->
+
+
+<!-- <meta name="viewport" content="width=device-width inital-scale=1.0">
+<style>
+.container{
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+.green{
+    margin: 5px;
+    height: 50px;
+    background-color: greenyellow;
+    flex-basis: 100%;
+}
+
+.blue{
+    margin: 5px;
+height: 50px;
+background-color: aqua;
+flex-basis: 30%;
+}
+.white{
+    margin: 5px;
+    height: 50px;
+    background-color: gray;
+    flex-basis: 20%;
+}
+
+.one{
+    background-color: blueviolet;
+    width: 60px;
+    height: 60px;
+    float: left;
+}
+
+
+
+@media (max-width:1007px) {
+    .green,.blue{
+        flex-basis: 100%;
+    }
+   
+    .white{
+        flex-basis: 40%;
+    }
+}
+
+/* @media screen  and (max-width:1007px) {
+   
+    .white{
+        flex-basis: 50%;
+    }
+} */
+
+@media (max-width:640px) {
+    .green,.blue,.white{
+        flex-basis: 100%;
+    }
+    .one{
+        float:none
+    }
+}
+
+
+
+</style>
+
+
+<div class="container">
+    <div class="green"></div>
+     <div class="container">
+<div class="blue"></div>
+<div class="blue"></div>
+<div class="blue"></div>
+   
+        <div class="white"></div>
+        <div class="white"></div>
+        <div class="white"></div>
+        <div class="white"></div>
+         
+
+</div>
+
+
+    <div class="one">
+
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam, magni? Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, laborum.</p> -->
+
+
+     <!DOCTYPE html>
+     <html>
+        <head>
+            <title>Responsive Web</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        </head>
+        <body>
+            <style>
+                .container{
+                    display: flex;
+                    justify-content: space-around;
+                    flex-wrap: wrap;
+                }
+                .div1{
+height: 150px;
+background-color: aqua;
+flex-basis: 20%;
+margin: 5px;
+                }
+                .div2{
+height: 200px;
+background-color:blue;
+flex-basis: 20%;
+margin: 5px;
+                }
+                .div3{
+height: 200px;
+background-color:blueviolet;
+flex-basis: 20%;
+margin: 5px;
+                }
+                .div4{
+height: 250px;
+background-color:chartreuse;
+flex-basis: 20%;
+margin: 5px;
+                }
+                @media (max-width:1007px){
+                    .div1,.div2,.div3,.div4{
+                        flex-basis: 40%;
+                    }
+                }
+                @media (max-width:640px){
+                    .div1,.div2,.div3,.div4{
+                        flex-basis: 100%;
+                    }
+                }
+            </style>
+            <div class="container">
+                <div class="div1"></div>
+                <div class="div2"></div>
+                <div class="div3"></div>
+                <div class="div4"></div>
+            </div>
+        </body>
+     </html>

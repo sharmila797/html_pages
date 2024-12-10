@@ -1,0 +1,100 @@
+<!-- <html>
+    <head>
+        <title>modal</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        let input,ii;
+input=prompt("what is your name??");
+ii=confirm(`${input},is it your name?`);
+    </script>
+</html> -->
+
+<!-- <html>
+    <head>
+        <title>sample</title>
+    </head>
+    <body>
+        <input id="id1" type="number">
+        <input id="id2" type="number">
+        <button id="submit" onclick="submit(e)">Add</button>
+        <p id="result"></p>
+        <p id="result1"></p>
+    </body>
+    <script>
+
+        let e=document.getElementById("submit")
+        let result=document.getElementById("result")
+        let result1=document.getElementById("result1")
+        function submit(e){
+          let c = document.getElementById("id2").value
+           let d= document.getElementById("id1").value
+           let total=Number(c)+Number(d)
+           console.log(total)
+         result1.textContent=total+" values"
+        }
+e.addEventListener('click',(e)=>{
+    let c=Number(document.getElementById("id1").value) + Number(document.getElementById("id2").value)
+    console.log(c)
+ 
+result.innerHTML="Total : "+c
+})
+      
+       
+    </script>
+</html> -->
+
+<!-- Game -->
+<html>
+    
+<head>
+    <title>SAmple</title>
+</head>
+<body>
+    <h1>Guess the number</h1>
+    <input id="int">
+    <button id="submit" onclick="submitvalue()">click</button>
+    <p id="check">You are Right/Wrong</p>
+    <p id="mark">Score : 10 </p>
+</body>
+<script>
+    let num=document.getElementById("int")
+   let randomnumber=Math.floor(Math.random()*10)+1; 
+ 
+   let checkstatus=document.getElementById("check")
+   let mark=document.getElementById("mark")
+   let last,final;
+    final=last=10;
+   
+function submitvalue(e)
+{
+    console.log("rrrr",randomnumber,num.value)
+    if((num.value) == randomnumber)
+{
+    console.log("right")
+    checkstatus.textContent="You are Right";
+    mark.textContent=final
+    alert("You Won the Game")
+    num.value=" ";
+}
+else{
+    if(final>1)
+    {
+        final=final-1;
+   checkstatus.textContent="You are Wrong";
+   mark.textContent="Score:"+final
+    console.log("wrong")
+    }
+  else{
+    alert("you are loser,Start a new game")
+    mark.textContent="Score : "+last;
+  }
+
+}
+num.value=" ";
+}
+</script>
+</html>
+<!-- game over -->

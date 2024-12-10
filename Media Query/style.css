@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: gray;
+
+}
+
+.container{
+    background-color: blueviolet;
+    width: 500px;
+    height: 500px;
+    margin-top: 300px;
+    margin-left: 300px;
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+align-items: center;
+justify-content: center;
+
+
+}
+.container h1{
+    background-color: black;
+    color: white;
+    width: fit-content;
+    height: fit-content;
+    margin: 5px;
+}

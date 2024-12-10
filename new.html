@@ -1,0 +1,194 @@
+ <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blinking Button with Color Change</title>
+    <style>
+        /* Keyframes for blinking and color change effect */
+        @keyframes blink-colors {
+            0%, 100% {
+                background-color: #4CAF50; /* Green */
+                color: white;
+                opacity: 1;
+            }
+            50% {
+                background-color: #f44336; /* Red */
+                color: black;
+                opacity: 1;
+            }
+        }
+
+        /* Button styling */
+        .blink-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            animation: blink-colors 2s infinite;
+         
+        }
+
+        /* Optional hover effect */
+        .blink-button:hover {
+            background-color: #333;
+            color: white;
+            animation: none; /* Pause animation on hover */
+        }
+    </style>
+</head>
+<body>
+
+<button class="blink-button">Blinking Button</button>
+
+</body>
+</html> -->
+
+
+
+<!-- <html>
+    <head>
+        <title>Welcome</title>
+    </head>
+    <body>
+        <h1 id="head">Welcome</h1>
+        <h1 id="head">Back</h1>
+        <div id="divt"   className="change">
+
+        </div>
+        <script>
+            console.log(document.getElementById("head"))
+            let e=document.getElementById("head")
+            console.log(e.textContent +"to the Chrome")
+            let e1=document.getElementById("divt")
+            e1.innerHTML="<button>button</button>"
+            console.log("e11111",e1.textContent + "sample")
+            // e1.className="nodivt"
+            // e1.style.backgroundColor="red"
+            // let e2=document.getElementsByTagName("h1")
+            // console.log("e1",e2)
+let para=document.createElement("p");
+para.textContent="New adding";
+para.id="new"
+para.className="nnn"
+e1.append(para);
+e1.prepend(para);
+console.log("paraa",para)
+        </script>
+    </body>
+</html> -->
+
+
+<!-- <html>
+    <head>
+        <title>Smaple Test</title>
+    </head>
+    <body>
+        <button id="but">click</button>
+        <input id ="inp"></input>
+    </body>
+    <script>
+        let btn=document.getElementById("but")
+        let iin=document.getElementById("inp")
+
+        btn.addEventListener('click',(e)=>{
+            btn.style.backgroundColor='green'
+        })
+        btn.addEventListener('mouseover',(e)=>{
+            btn.style.backgroundColor='blue'
+        })
+        // btn.addEventListener('click',(e)=>{
+        //     btn.textContent="Already Clicked"
+        //     console.log("clicked")
+        // })
+
+        // btn.addEventListener('mouseover',(event)=>{
+        //     btn.textContent="mouse hovering"
+        //     console.log("mouse hover")
+        // })
+        // btn.addEventListener('mouseout',(e)=>{
+        //     btn.textContent="click me"
+        //     console.log("mouse out event")
+        // })
+        // console.log("btn display",)
+
+        iin.addEventListener('keydown',(e)=>{
+            console.log(e.key)
+            console.log("values",e.target.value)
+        })
+
+    //     document.addEventListener('keydown',(e)=>{
+    //         console.log(e.key)
+
+    //         switch(event.key){
+    //             case "ArrowUp":
+    //                 btn.textContent=Number(btn.textContent)+1;
+    //                 break;
+    //             case "ArrowDown":
+    //                 btn.textContent=Number(btn.textContent)-1;
+    //                 break;
+    // case "ArrowRight":
+    //                 btn.textContent=btn.textContent+"Right"+1;
+    //                 break;
+    //      case "ArrowLeft":
+    //                 btn.textContent=btn.textContent+"left"+1;
+    //                 break;
+
+    //         }
+    //     })
+    </script>
+</html> -->
+
+
+
+
+<!-- Todo list -->
+
+<html>
+    <head>
+        <title>TODO</title>
+    </head>
+    <body>
+        <h1>ToDo List</h1>
+        <ul id="todolist">
+
+        </ul>
+        <div>
+            <input id="input" type="text">
+            <button id="submit" 
+            >Add Task</button>
+        </div>
+        <h2>Completed</h2>
+        <ul id="complete">
+
+        </ul>
+        
+    </body>
+    <script>
+// let addtask=((e)=>{
+//     console.log("clicked",e)
+// })
+let list=new Array();
+let e=document.getElementById("submit")
+let add=document.getElementById("input")
+let todo=document.getElementById("todolist")
+let complete=document.getElementById("complete")
+e.addEventListener('click',(event)=>{
+if(add.value!='')
+{
+    list.push(add.value);
+    console.log(list)
+    todo.innerHTML +='<li id="'+(list.length-1)+'"><button onclick="donestatus('+(list.length-1)+')">'+add.value+'</button></li>'
+    add.value='';
+}
+})
+function donestatus(id){
+    console.log("donestatus")
+ complete.innerHTML += '<li>'+list[id]+'</li>'
+// document.getElementById(id).style.display="none"
+document.getElementById(id).pop(id);
+}
+
+    </script>
+</html>

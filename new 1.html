@@ -1,0 +1,188 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blinking Download Brochure Button</title>
+    <style>
+        /* Keyframes for the blinking color effect */
+        @keyframes blink-colors {
+            0%, 100% {
+                background-color: #FFC107; /* Bright yellow */
+                color: #003399; /* Blue text */
+            }
+            50% {
+                background-color: #FF5722; /* Orange */
+                color: white; /* White text */
+            }
+        }
+
+        /* Styling for the vertical button */
+        .vertical-button {
+            display: inline-block;
+            padding: 20px 20px;
+            background-color: #FFC107; /* Initial bright yellow background */
+            color: #003399; /* Blue text */
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            border-radius:20px 0 20px 0; /* Rounded top-right and bottom-right corners */
+            writing-mode: vertical-rl; /* Vertical text */
+            text-orientation: mixed;
+            text-decoration: none;
+            position: absolute;
+			margin-right:500px;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            cursor: pointer;
+            animation: blink-colors 2s infinite; /* Apply the blinking color effect */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow effect */
+        }
+
+        /* Optional hover effect */
+        .vertical-button:hover {
+            background-color: #FFB300; /* Change color on hover */
+            animation: none; /* Stop blinking on hover */
+        }
+    </style>
+</head>
+<body>
+
+
+<a href="#" class="vertical-button">DOWNLOAD BROCHURE</a>
+
+</body>
+</html> -->
+
+
+
+
+<!-- <html>
+    <body>
+        <input id="inputbox" >
+        <button id="but" onclick="clicked()">click</button>
+        <h1 id="demo"></h1>
+    </body>
+    <script>
+        let box=document.getElementById("inputbox");
+        let b=box.value
+        box.addEventListener('keydown',(e)=>{
+            document.getElementById("demo").textContent="Result "+box.value;
+        })
+function clicked(){
+
+    document.getElementById("demo").innerHTML=box.value;
+}
+        
+    </script>
+</html> -->
+<!-- 
+<html>
+    <body>
+        <div id="div">
+            <h1 id="n">Name</h1>
+            <button id="but" onclick="addition(id)">AA</button>
+            <button id="but1" onclick="addition(id)">BB</button>
+            <button id="but2" onclick="addition(id)">CC</button>
+          
+        </div>
+        
+    </body>
+    <script>
+        // let add=document.getElementById("div")
+        // function addition(){
+        //     let list=document.createElement("h1");
+        //     list.textContent="Hellow"
+        //     add.append(list);
+        // }
+        // let add=document.getElementById("but")
+       
+        // function addition(id){
+        //     let name=document.getElementById("n")
+           
+        //     let add=document.getElementById(id)
+         
+        //    let aa=add.textContent;
+        //     name.innerHTML="Name: "+ add.textContent;
+        // } 
+        
+        
+// add.style.backgroundColor="red"
+      
+// add.addEventListener('click',(e)=>{
+//     add.style.backgroundColor="blue"
+// })
+// add.addEventListener('mouseover',(e)=>{
+//     add.style.backgroundColor="red"
+// })
+
+    </script>
+</html> -->
+
+
+<!-- <html>
+    <body>
+        <div id="div">
+        <h1 id="one" onclick="deleted(id)">One</h1>
+        <h1 id="two" onclick="deleted(id)">Two</h1>
+        <h1 id="Three" onclick="deleted(id)">Three</h1>
+        <h1 id="Four" onclick="deleted(id)">Four</h1>
+        <h1 id="Five" onclick="deleted(id)">Five</h1>
+    </div>
+    </body>
+    <script>
+        let div=document.getElementById("one")
+        div.append("hellow")
+       div.prepend("hh")
+        function deleted(id){
+            let sam=document.getElementById(id)
+           sam.remove();
+        }
+    </script>
+</html> -->
+
+
+<html>
+    <head>
+        <title>TODO LIST</title>
+    </head>
+    <body>
+        <center>
+        <div>
+            <input id="box">
+            <button id="but" onclick="addition()">Add Event</button>
+            <ul id="list">
+                <!-- <li id="list">"Hello
+                    <button onclick='deletefun(event)'>delete</button>
+                </li> -->
+            </ul>
+        </div>
+        <iframe src="https://react.dev/" width="800px" height="750px"></iframe>
+    </center>
+    </body>
+    <script>
+        function addition(){
+            let box=document.getElementById("box")
+let list=document.getElementById("list")
+let li=document.createElement("li")
+li.innerHTML=box.value +" &nbsp;&nbsp;"+"<button id='dell'  onclick='deletefun(event)'>Delete</button>";
+list.append(li)
+box.value="";
+}
+function deletefun(event){
+    event.target.parentElement.remove();
+}
+// let del=document.getElementById(dell')
+// del.addEventListener('click',(e)=>{
+//     console.log(del,e)
+//     e.target.parentElement.remove();
+// })
+// bbut.addEventListener('click',(e)=>{
+//     e.target.text.remove();
+// })
+
+      
+    </script>
+</html>
