@@ -361,15 +361,17 @@ return res;
 .then((res)=>{
 console.log("second then",res,res.length)
 return res;
-}).then((res)=>{
+})
+.then((res)=>{
     for(let i=0;i<res.length;i++)
         {
     setTimeout(()=>{
-        console.log("third then",res[i])
+        console.log("third then display after setTimeout",res[i])
     },i*5000)
         }
         return res;
-}).then((res)=>{
+})
+.then((res)=>{
 
         console.log("fourth then value",res)    
 
@@ -378,9 +380,8 @@ return res;
  }).catch((err)=>{
     console.log("error value",err)
  })
-//  return res;
-})
 
+})
 .catch((err)=>{
     console.log("The err value is",err)
 }).finally(()=>{
@@ -415,6 +416,4 @@ function secondcreation(nam){
         })
         return pp;
     }
-
-    return nam;
 }
