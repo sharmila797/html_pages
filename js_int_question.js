@@ -342,14 +342,6 @@ function fetchData() {
     )
 }
 
-fetchData((data) => {
-    if (data) { // Check if data is not null or undefined
-        console.log(data.toUpperCase());
-    } else {
-        console.error("No data received or data is invalid.");
-    }
-});
-
 fetchData().then((data)=>{
     console.log(data.toUpperCase());
 }).catch((err)=>{
