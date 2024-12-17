@@ -306,22 +306,52 @@ ii=confirm(input,"is it your name?"); */
 
 
 
+// function fetchData() {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve("Data received!");  // or reject("Error occurred!");
+//         }, 3000);
+//     });
+// }
+
+// async function handleData() {
+//     try {
+//         const data = await fetchData();
+//         console.log(data);
+//         // document.getElementById("h1").innerHTML=data;
+//     } catch (error) {
+//         console.error("Error:", error);
+//     }
+// }
+
+// handleData();
+
+
 function fetchData() {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve,reject)=>{
         setTimeout(() => {
-            resolve("Data received!");  // or reject("Error occurred!");
-        }, 3000);
-    });
-}
-
-async function handleData() {
-    try {
-        const data = await fetchData();
-        console.log(data);
-        // document.getElementById("h1").innerHTML=data;
-    } catch (error) {
-        console.error("Error:", error);
+            const data=null   //or "null"
+           if(data){
+            resolve(data)
+           }
+           else{
+            reject("no data received")
+           }
+        }, 1000);
     }
+    )
 }
 
-handleData();
+// fetchData((data) => {
+//     if (data) { // Check if data is not null or undefined
+//         console.log(data.toUpperCase());
+//     } else {
+//         console.error("No data received or data is invalid.");
+//     }
+// });
+
+fetchData().then((data)=>{
+    console.log(data.toUpperCase());
+}).catch((err)=>{
+    console.log("no data received",err)
+})
