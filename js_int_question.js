@@ -326,24 +326,95 @@ ii=confirm(input,"is it your name?"); */
 
 // handleData();
 
+// promise example
+// function fetchData() {
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(() => {
+//             const data=null   //or "null"
+//            if(data){
+//             resolve(data)
+//            }
+//            else{
+//             reject("no data received")
+//            }
+//         }, 1000);
+//     }
+//     )
+// }
 
-function fetchData() {
-    return new Promise((resolve,reject)=>{
-        setTimeout(() => {
-            const data=null   //or "null"
-           if(data){
-            resolve(data)
-           }
-           else{
-            reject("no data received")
-           }
-        }, 1000);
-    }
-    )
+// fetchData().then((data)=>{
+//     console.log(data.toUpperCase());
+// }).catch((err)=>{
+//     console.log("no data received",err)
+// })
+
+
+//  promise chaining example
+const cart=["sharmila","sharmi"];  //or "sharmila"
+const arr=[];
+const promise=create(cart);
+
+promise.then((res)=>{
+console.log("The promise value is ",res)
+return res;
+})
+.then((res)=>{
+console.log("second then",res,res.length)
+return res;
+}).then((res)=>{
+    for(let i=0;i<res.length;i++)
+        {
+    setTimeout(()=>{
+        console.log("third then",res[i])
+    },i*5000)
+        }
+        return res;
+}).then((res)=>{
+
+        console.log("fourth then value",res)    
+
+ secondcreation(res).then((res)=>{
+    console.log("chaining",res)
+ }).catch((err)=>{
+    console.log("error value",err)
+ })
+//  return res;
+})
+
+.catch((err)=>{
+    console.log("The err value is",err)
+}).finally(()=>{
+    console.log("finally finished")
+})
+
+function create(cart){
+    console.log("first",cart,cart[0] instanceof String)
+    const pr=new Promise(function(resolve,reject){
+        if(typeof(cart[0]) === "string" || cart instanceof String){
+            resolve(cart)
+        }
+        else{
+            reject("The cart value is not a string")
+        }
+    })
+    return pr;
 }
 
-fetchData().then((data)=>{
-    console.log(data.toUpperCase());
-}).catch((err)=>{
-    console.log("no data received",err)
-})
+
+function secondcreation(nam){
+    console.log("secondcreation(res)",nam)
+    for(i of nam)
+    {
+        const pp=new Promise((resolve,reject)=>{
+            if((typeof i)=== "string"){
+                resolve(i)
+            }
+            else{
+                reject("error displayed")
+            }
+        })
+        return pp;
+    }
+
+    return nam;
+}
